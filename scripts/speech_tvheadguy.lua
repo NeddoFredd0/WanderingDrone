@@ -33,6 +33,11 @@ return {
             NOTMERM = "I'm not fishy, scaly, or smelly enough for that.",
             NOKELP = "only_used_by_wurt",
             HASMERMLEADER = "only_used_by_wurt",
+            },
+        APPLYELIXIR =
+        {
+            TOO_SUPER = "That's strong stuff.",
+            NO_ELIXIRABLE = "only_used_by_wendy",
 		},
         APPLYMODULE =
         {
@@ -42,12 +47,6 @@ return {
         APPRAISE =
         {
             NOTNOW = "Nah, can't do that right now.",
-        },
-        ATTACH_GHOST =
-        {
-            WRONG_SISTURN = "only_used_by_wendy",
-            SISTURN_OFF = "only_used_by_wendy",
-            ABIGAIL_NOT_NEAR = "only_used_by_wendy",
         },
         ATTUNE =
         {
@@ -136,6 +135,10 @@ return {
             GENERIC = "I'm definitely not a cooking drone.",
             INUSE = "Guess I should let this yobbo finish.",
             TOOFAR = "They never gave me extendo-arms.",
+        },
+        DIRECTCOURIER_MAP =
+        {
+            NOTARGET = "only_used_by_walter",
         },
         DISMANTLE =
 		{
@@ -313,6 +316,7 @@ return {
             NOWATERNEARBY = "only_used_by_waxwell_and_wicker",
             TOOMANYBIRDS = "only_used_by_waxwell_and_wicker",
             WAYTOOMANYBIRDS = "only_used_by_waxwell_and_wicker",
+            BIRDSBLOCKED = "only_used_by_waxwell_and_wicker",
             NOFIRES =       "only_used_by_waxwell_and_wicker",
             NOSILVICULTURE = "only_used_by_waxwell_and_wicker",
             NOHORTICULTURE = "only_used_by_waxwell_and_wicker",
@@ -353,6 +357,7 @@ return {
             NOTMASTERCHEF = "I'm definitely not a cooking drone.",
             NOTAMERM = "Maybe if I smelt a bit more like fish.",
             NOTSOULJARHANDLER = "Not my place to go rummaging around.",
+            RESTRICTED = "Surprisingly thief-proof.",
 		},
         SADDLE =
         {
@@ -385,6 +390,7 @@ return {
 			INUSE = "Guess I should let this yobbo finish.",
             NOTMASTERCHEF = "I'm definitely not a cooking drone.",
             NOTSOULJARHANDLER = "None of my business, this is.",
+            RESTRICTED = "Surprisingly thief-proof.",
 		},
         TEACH =
         {
@@ -444,23 +450,40 @@ return {
         {
             DOESNTWORK = "That's not gonna happen.",
             ALREADYACTIVE = "It's already busy, I reckon.",
-        },
-        CUSTOMIZE_WOBY_BADGES =
-        {
-            GENERIC = "only_used_by_walter",
-            BURNING = "only_used_by_walter",
-            INUSE = "only_used_by_walter",
+            NORESPONSE = "S' toddled off somewhere.",
+            RIGHTTHERE = "Gonna have to wait.",
         },
         YOTB_UNLOCKSKIN =
         {
             ALREADYKNOWN = "Already stored that one away inside my braincase.",
         },
+        CARVEPUMPKIN =
+		{
+			INUSE = "That's too bad, I was gonna carve a-",
+			BURNING = "Not my brightest moment.",
+		},
+		DECORATESNOWMAN =
+		{
+			INUSE = "Someone else is already making an eldritch abomination.",
+			HASHAT = "Already dapper as ever.",
+			STACKEDTOOHIGH = "I can't reach up past my head!",
+			MELTING = "Old mate's about to become a puddle.",
+		},
         MUTATE =
         {
             NOGHOST = "only_used_by_wendy",
             NONEWMOON = "only_used_by_wendy",
             NOFULLMOON = "only_used_by_wendy",
             NOTNIGHT = "only_used_by_wendy",
+            CAVE = "only_used_by_wendy",
+        },
+		MODSLINGSHOT =
+		{
+			NOSLINGSHOT = "only_used_by_walter",
+		},
+		POUNCECAPTURE =
+		{
+			MISSED = "Too physical for me. Gah!",
         },
     },
 
@@ -811,6 +834,38 @@ return {
         "only_used_by_walter",
 	},
 	ANNOUNCE_STORYTELLING_ABORT_NOT_NIGHT =
+    {
+        "only_used_by_walter",
+	},
+	ANNOUNCE_WOBY_RETURN =
+	{
+		"only_used_by_walter",
+	},
+	ANNOUNCE_WOBY_SIT =
+	{
+		"only_used_by_walter",
+	},
+	ANNOUNCE_WOBY_FOLLOW =
+	{
+		"only_used_by_walter",
+	},
+	ANNOUNCE_WOBY_PRAISE =
+	{
+		"only_used_by_walter",
+	},
+	ANNOUNCE_WOBY_FORAGE =
+	{
+		"only_used_by_walter",
+	},
+	ANNOUNCE_WOBY_WORK =
+	{
+		"only_used_by_walter",
+	},
+	ANNOUNCE_WOBY_COURIER =
+	{
+		"only_used_by_walter",
+	},
+	ANNOUNCE_WOBY_REMEMBERCHEST_FAIL =
 	{
         "only_used_by_walter",
 	},
@@ -830,6 +885,12 @@ return {
         "Ah! What's happening to m- Your majesty!",
         "Woahwoahwoah, why am I bending over?! Your highness.",
         "Ah! What's happening to m- My leige!",
+    },
+    ANNOUNCE_ROYALTY_JOKER =
+    {
+        "Ah! What's happening to m- You donkey!",
+        "Woahwoahwoah, why am I bending over?! Your foolishness.",
+        "Ah! What's happening to m- My sneeze!",
     },
 
     ANNOUNCE_ATTACH_BUFF_ELECTRICATTACK    = "Zap, zap, zap, here we crack.",
@@ -1084,7 +1145,11 @@ return {
     -- Hallowed Nights 2024
 	ANNOUNCE_NOPUMPKINCARVINGONFIRE = "Gahh!!",
 
-    --rifts 5
+    -- Winter's Feast 2024
+	ANNOUNCE_SNOWBALL_TOO_BIG = "That snowball's big, and it's not getting bigger.",
+	ANNOUNCE_SNOWBALL_NO_SNOW = "Need more snow.",
+
+    -- Meta 5
     ANNOUNCE_WENDY_BABYSITTER_SET = "only_used_by_wendy",
     ANNOUNCE_WENDY_BABYSITTER_STOP = "only_used_by_wendy",
 
@@ -2024,10 +2089,13 @@ return {
         CHESSPIECE_EYEOFTERROR = "I'd start a staring contest, but I might have an unfair advantage.",
         CHESSPIECE_TWINSOFTERROR = "Eye don't really get the appeal behind this.",
         CHESSPIECE_DAYWALKER = "A granite porcine statue, for where I reside.",
+        CHESSPIECE_DAYWALKER2 = "That bastard tried to keep me from my tapes.",
         CHESSPIECE_DEERCLOPS_MUTATED = "What a horrific glass-eyed beast. Glad it's stone now.",
         CHESSPIECE_WARG_MUTATED = "What's wrong with making a statue of something nice?",
         CHESSPIECE_BEARGER_MUTATED = "Destroyer of forests and lives; now just a rock.",
         CHESSPIECE_SHARKBOI = "A statue to flexible allegiances.",
+        CHESSPIECE_WORMBOSS = "What I got for digging too deep.",
+        CHESSPIECE_YOTS = "Festivities aren't my forte.",
 
         CHESSJUNK1 = "It's junk, and there's lots of it. Not quite what I'm looking for...",
         CHESSJUNK2 = "I've got junk on the brain.",
@@ -5544,6 +5612,22 @@ return {
 		},
         SNOWBALL_ITEM = "Nope, no rocks inside it.",
 
+        -- Year of the Snake
+        YOTS_SNAKESHRINE =
+        {
+            GENERIC = "A place to grab some festive stuff.",
+            EMPTY = "At least someone's hungry for that weird purple stuff.",
+            BURNT = "So much for the festivities.",
+        },
+        YOTS_WORM = "A lucky find... or maybe not so lucky.",
+        YOTS_LANTERN_POST = 
+        {
+            GENERIC = "Brings a warm ambiance to the table.",
+            BURNT = "It brought a particularly warm ambiance while it was on fire.",
+        },
+        YOTS_LANTERN_POST_ITEM = "Construction, schmonstruction.",
+        CHESSPIECE_DEPTHWORM  = "There are worms in chess?",
+
         -- Meta 5
         GHOSTLYELIXIR_LUNAR = "'Taking a swig would be the easy way out of here.'",
         GHOSTLYELIXIR_SHADOW = "'Taking a swig would be the easy way out of here.'",
@@ -5561,11 +5645,55 @@ return {
 		SLINGSHOT_HANDLE_SILK = "Looks like he's getting into tinkering.",
 		SLINGSHOT_HANDLE_VOIDCLOTH = "Looks like he's getting into tinkering.",
 
-        WOBY_BADGE_STATION = "I have my trinkets, and you have yours.",
+        WOBY_TREAT = "I'm certainly not gonna eat it.",
+		BANDAGE_BUTTERFLYWINGS = "Might hold together a wound, might not.",
+		PORTABLEFIREPIT_ITEM = "Great for those who don't wanna settle down.",
+        SLINGSHOTAMMO_CONTAINER = "A mischief maker's box.",
 
         ELIXIR_CONTAINER = "Everyone's gotta have a place for their stuff.",
         GHOSTFLOWERHAT = "No idea what this is.",
         WENDY_RESURRECTIONGRAVE = "It's a grave matter.",
+        GRAVEURN =
+        {
+            GENERIC = "Is it some sort of vase?",
+            HAS_SPIRIT = "Let me know if you see any tapes lying around, yeah?",
+        },
+
+        SHALLOW_GRAVE = "What, a skeleton is too ghoulish? Too spooky?",
+        THULECITEBUGNET = "Should be a bit more durable.",
+
+        -- Deck of Cards
+        DECK_OF_CARDS = "I'm not dealing, don't look at me.",
+        PLAYING_CARD = "Keeps the mind busy.",
+        BALATRO_MACHINE = "This thing thinks it's the 'creme de la creme' of entertainment.\nWe'll see about that.",
+
+		-- Rifts 5
+		GESTALT_CAGE =
+		{
+			GENERIC = "Empty.",
+			FILLED = "Full of life.",
+		},
+		WAGBOSS_ROBOT = "What have I gotten myself tangled up in...",
+        WAGBOSS_ROBOT_POSSESSED = "Whatever this is, it's no business of mine.",
+		ALTERGUARDIAN_PHASE1_LUNARRIFT = "I thought we were finished with this?",
+        ALTERGUARDIAN_PHASE4_LUNARRIFT = "Uh oh. I don't like the look of that.",
+		WAGDRONE_ROLLING =
+        {
+            GENERIC = "That makes me feel old.",
+            FRIENDLY = "Maybe I'll ask that old guy for a roll-mode upgrade later.",
+        },
+		WAGDRONE_FLYING = "It's... beautiful.",
+
+        WAGPUNK_WORKSTATION = "Hopefully my skills in tinkering with tapes will translate to this.",
+        WAGPUNK_LEVER = "Always fun to give a lever a good pull.",
+        WAGPUNK_FLOOR_KIT = "Good for standing on.",
+        WAGPUNK_CAGEWALL = "That'll keep something out.",
+
+        WANDERINGTRADER = "Ah, another wanderer. 'Cept I don't think we're after the same stuff.",
+
+        GESTALT_GUARD_EVOLVED = "I can see visions of where I came from... and I don't like it.", -- TODO
+        FLOTATIONCUSHION = "Not comfy, but it beats drowning.",
+        LUNAR_SEED = "The old guy's latest MacGuffin obsession.",
     },
 
     DESCRIBE_GENERIC = "Yup. S'definitely a thing.",
@@ -5588,5 +5716,9 @@ return {
         TALLBIRDEGG_CRACKED = ".. that was exactly the kinda thing the survival guys on tape would do.",
 		WINTERSFEASTFUEL = "Now I feel all merry and bright.",
     },
+    
+    WENDY_SKILLTREE_EASTEREGG = "only_used_by_wendy",
+
+
 }
 --eof!!!!!!! :shocked: :shocked: :sunglasses: :fire: :fire:

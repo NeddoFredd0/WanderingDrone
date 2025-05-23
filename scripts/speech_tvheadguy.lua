@@ -1922,7 +1922,7 @@ return {
 			HELD = "I've successfully pretended to be a human child.",
 		},
 		BUTTERFLYMUFFIN = "Isn't food supposed to fill you up?",
-		BUTTERFLYWINGS = "Murdering the widlife is a questionable use of time.",
+		BUTTERFLYWINGS = "Murdering the wildlife is a questionable use of time.",
 		BUZZARD = "The concept of 'peace and quiet' is news to this loser.",
 
 		SHADOWDIGGER = "Would be nice having a shovel-wielding bodyguard.",

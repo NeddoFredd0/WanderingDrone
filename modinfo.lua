@@ -2,9 +2,10 @@
 name = "Wandering Drone (Skilltree Update!)"
 description =
 [[
-Patch Notes: (0.2.0.4 Bugfix)
-- Fixed crash when using Cyclical Life with Don't Starve: Alone
-(DS:A still causes many other visual and gameplay issues with WD, playing with both mods enabled is still not recommended)
+Patch Notes: (0.2.0.5 Hostile Takeover Compatibility)
+- WD's electric-themed tapes will now trigger the new electrocution state on victims
+- Updated examine quotes up to Hostile Takeover
+- Fixed some typos and reworded some descriptions
 
 Major skilltree update - focusing on the Affinity tree, and the Media Archive.
 - Affinity tree has 4 brand new skills (2 for each side.)
@@ -24,7 +25,7 @@ Turn them into powerful abilities you can use to enhance your survival experienc
 However, you must maintain a mysterious Itch in order to not self-destruct. Entertainment is your purpose, after all.
 ]]
 author = "NeddoFreddo"
-version = "0.2.0.4" -- 0.2.0.4 Bugfix
+version = "0.2.0.5" -- 0.2.0.5 Compatibility
 
 -- This is the URL name of the mod's thread on the forum; the part after the ? and before the first & in the url
 forumthread = ""

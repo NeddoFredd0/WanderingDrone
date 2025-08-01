@@ -74,14 +74,14 @@ local function lightning_periodictask(inst, target)
                     --Skilltree
                     if target:HasTag("tvheadguy_entertainment_lightning") then --IDEA: "moonstorm_spark_shock_fx" spawns pre-emptively before lightning
                         if victim:HasTag("epic") then
-                            victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING.DAMAGE + TUNING.TAPE_LIGHTNING.BOSS_DMG_BONUS, nil, nil, {planar = TUNING.TVSKILLTREE.LIGHTNING_PLANAR_DMG_BONUS})
+                            victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING.DAMAGE + TUNING.TAPE_LIGHTNING.BOSS_DMG_BONUS, nil, "electric", {planar = TUNING.TVSKILLTREE.LIGHTNING_PLANAR_DMG_BONUS})
                             if victim.AnimState ~= nil then
                                 --SpawnPrefab("hitsparks_fx"):Setup(target, victim) --TODO: figure out why these nil checks don't work?????
                             else
                                 print("DEBUG: No animstate on target!")
                             end
                         else
-                            victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING.DAMAGE, nil, nil, {planar = TUNING.TVSKILLTREE.LIGHTNING_PLANAR_DMG_BONUS})
+                            victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING.DAMAGE, nil, "electric", {planar = TUNING.TVSKILLTREE.LIGHTNING_PLANAR_DMG_BONUS})
                             if victim.AnimState ~= nil then
                                 --SpawnPrefab("hitsparks_fx"):Setup(target, victim)
                             else
@@ -90,14 +90,14 @@ local function lightning_periodictask(inst, target)
                         end
                     else
                         if victim:HasTag("epic") then
-                            victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING.DAMAGE + TUNING.TAPE_LIGHTNING.BOSS_DMG_BONUS)
+                            victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING.DAMAGE + TUNING.TAPE_LIGHTNING.BOSS_DMG_BONUS, nil, "electric")
                             if victim.AnimState ~= nil then
                                 --SpawnPrefab("hitsparks_fx"):Setup(target, victim) --TODO: figure out why these nil checks don't work?????
                             else
                                 print("DEBUG: No animstate on target!")
                             end
                         else
-                            victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING.DAMAGE)
+                            victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING.DAMAGE, nil, "electric")
                             if victim.AnimState ~= nil then
                                 --SpawnPrefab("hitsparks_fx"):Setup(target, victim)
                             else
@@ -467,14 +467,14 @@ local function electape_payback(player, data, inst)
 
                 --Skilltree
                 if player:HasTag("tvheadguy_entertainment_electric") then
-                    attacker.components.combat:GetAttacked(player, damage_mult * TUNING.TAPE_ELECTRIC.DAMAGE, nil, nil, {planar = TUNING.TVSKILLTREE.ELECTRIC_PLANAR_DMG_BONUS})
+                    attacker.components.combat:GetAttacked(player, damage_mult * TUNING.TAPE_ELECTRIC.DAMAGE, nil, "electric", {planar = TUNING.TVSKILLTREE.ELECTRIC_PLANAR_DMG_BONUS})
                     if attacker.AnimState ~= nil then
                         SpawnPrefab("hitsparks_fx"):Setup(player, attacker)
                     else
                         print("DEBUG: No animstate on attacker!")
                     end
                 else
-                    attacker.components.combat:GetAttacked(player, damage_mult * TUNING.TAPE_ELECTRIC.DAMAGE)
+                    attacker.components.combat:GetAttacked(player, damage_mult * TUNING.TAPE_ELECTRIC.DAMAGE, nil, "electric")
                 end
             end
         end
@@ -1824,14 +1824,14 @@ local function lightning_upgraded_periodictask(inst, target)
                     end
 
                     if victim:HasTag("epic") then
-                        victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING_UPGRADED.DAMAGE + TUNING.TAPE_LIGHTNING_UPGRADED.BOSS_DMG_BONUS, nil, nil, {planar = TUNING.TAPE_LIGHTNING_UPGRADED.PLANAR_DMG_BONUS})
+                        victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING_UPGRADED.DAMAGE + TUNING.TAPE_LIGHTNING_UPGRADED.BOSS_DMG_BONUS, nil, "electric", {planar = TUNING.TAPE_LIGHTNING_UPGRADED.PLANAR_DMG_BONUS})
                         if victim.AnimState ~= nil then
                             --SpawnPrefab("hitsparks_fx"):Setup(target, victim) --TODO: figure out why these nil checks don't work?????
                         else
                             print("DEBUG: No animstate on target!")
                         end
                     else
-                        victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING_UPGRADED.DAMAGE, nil, nil, {planar = TUNING.TAPE_LIGHTNING_UPGRADED.PLANAR_DMG_BONUS})
+                        victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING_UPGRADED.DAMAGE, nil, "electric", {planar = TUNING.TAPE_LIGHTNING_UPGRADED.PLANAR_DMG_BONUS})
                         if victim.AnimState ~= nil then
                             --SpawnPrefab("hitsparks_fx"):Setup(target, victim)
                         else

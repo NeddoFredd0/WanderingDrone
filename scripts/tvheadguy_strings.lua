@@ -1047,7 +1047,7 @@ STRINGS.TVSKILLTREE = {
     ENTERTAINMENT_5_DESC = "Self-repairing with "..STRINGS.NAMES.TAPE_SYSRESTORE.." will grant bonus Sanity, and restore missing max Health.",
 
     ENTERTAINMENT_6_TITLE = "Listening Wind", --"Upgrade "..STRINGS.NAMES.TAPE_LIGHTNING, --Eye of the Storm
-    ENTERTAINMENT_6_DESC = "Lightning strikes from "..STRINGS.NAMES.TAPE_LIGHTNING.." deal "..TUNING.TVSKILLTREE.LIGHTNING_PLANAR_DMG_BONUS.." extra planar damage.\nFurthermore, strike enemies "..TUNING.TVSKILLTREE.LIGHTNING_MAXZAPS.." times instead of "..TUNING.TAPE_LIGHTNING.MAXZAPS..".",
+    ENTERTAINMENT_6_DESC = "Lightning strikes from "..STRINGS.NAMES.TAPE_LIGHTNING.." deal "..TUNING.TVSKILLTREE.LIGHTNING_PLANAR_DMG_BONUS.." extra planar damage.\nFurthermore, strike "..TUNING.TVSKILLTREE.LIGHTNING_MAXZAPS.." different enemies instead of "..TUNING.TAPE_LIGHTNING.MAXZAPS..".",
 
     ENTERTAINMENT_7_TITLE = "Lost and Found", --"Upgrade "..STRINGS.NAMES.TAPE_NIGHTVIS, --Worldwide
     ENTERTAINMENT_7_DESC = STRINGS.NAMES.TAPE_NIGHTVIS.."'s Day and Dusk effects are twice as potent.",

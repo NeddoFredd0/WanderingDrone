@@ -136,6 +136,9 @@ return {
             INUSE = "Guess I should let this yobbo finish.",
             TOOFAR = "They never gave me extendo-arms.",
         },
+        DEPLOY = {
+            HERMITCRAB_RELOCATE = "She's not home, seems like I gotta wait.",
+        },
         DIRECTCOURIER_MAP =
         {
             NOTARGET = "only_used_by_walter",
@@ -325,6 +328,8 @@ return {
             TOOMANYBEES = "only_used_by_waxwell_and_wicker",
             NOMOONINCAVES = "only_used_by_waxwell_and_wicker",
             ALREADYFULLMOON = "only_used_by_waxwell_and_wicker",
+            -- Electrocute
+            DEADBIRDS = "only_used_by_waxwell_and_wicker",
         },
         REMOTE_TELEPORT =
 		{
@@ -430,6 +435,8 @@ return {
             BEEF_BELL_HAS_BEEF_ALREADY = "Already keyed and paired.",
             
 			NOT_MINE = "This beefalo isn't mine.",
+
+            CANNOT_FIX_DRONE = "This drone needs a repair, but I'm not a repair drone.",
         },
 		USEKLAUSSACKKEY =
         {
@@ -484,6 +491,10 @@ return {
 		POUNCECAPTURE =
 		{
 			MISSED = "Too physical for me. Gah!",
+        },
+        DIVEGRAB =
+        {
+            MISSED = "Too physical for me. Gah!",
         },
     },
 
@@ -1161,9 +1172,19 @@ return {
     ANNOUNCE_ELIXIR_GHOSTVISION = "Guhh. Feels a bit weird.",
     ANNOUNCE_ELIXIR_PLAYER_SPEED = "Betcha can't catch me.",
 
-    ANNOUNCE_ABIGAIL_HIDING = "only_used_by_wendy",
-
     ANNOUNCE_EXLIIR_TOO_SUPER = "They must get more potent with age.",
+    
+    -- Rift 5
+
+    ANNOUNCE_LUNARGUARDIAN_INCOMING = "Gah!! I thought we were done...",
+    ANNOUNCE_FLOATER_HELD = "Gah! Get me out of this awful stuff!",
+    ANNOUNCE_FLOATER_LETGO = "Uh oh.",
+
+    -- Electrocute
+    ANNOUNCE_LUNARHAIL_BIRD_SOUNDS = "Where's my 'bird-repellant' tape...",
+    ANNOUNCE_LUNARHAIL_BIRD_CORPSES = "Gah, that's gross!",
+    ANNOUNCE_FLOAT_SWIM_TIRED = "I've got no strength left... not like I had a lot to begin with.",
+    ANOUNCE_MUTATED_BIRD_ATTACK = "Guesss I'd better take cover!",
 
 	BATTLECRY =
 	{
@@ -2096,6 +2117,8 @@ return {
         CHESSPIECE_SHARKBOI = "A statue to flexible allegiances.",
         CHESSPIECE_WORMBOSS = "What I got for digging too deep.",
         CHESSPIECE_YOTS = "Festivities aren't my forte.",
+        CHESSPIECE_WAGBOSS_ROBOT = "Creepy guys and evil robots are an awful combination.",
+        CHESSPIECE_WAGBOSS_LUNAR = "Well, yippee for us.",
 
         CHESSJUNK1 = "It's junk, and there's lots of it. Not quite what I'm looking for...",
         CHESSJUNK2 = "I've got junk on the brain.",
@@ -4801,6 +4824,7 @@ return {
 
         MOONSTORM_STATIC = "Wacky magic junk. It's making my antennas feel funny.",
         MOONSTORM_STATIC_ITEM = "There's a lotta interference coming from that thing.",
+        MOONSTORM_STATIC_ROAMER = "I'm tempted to try tuning into it... maybe that's not a good idea.",
         MOONSTORM_SPARK = "Strange. I'm getting plenty a weird images from this.",
 
         BIRD_MUTANT = "Gahh! What a horrid-looking watcher.",
@@ -5375,6 +5399,7 @@ return {
         RECORD_MAIN = "Old things like this have so much charm.",
         RECORD_WORKTOBEDONE = "Hm. Nice composition.",
         RECORD_HALLOWEDNIGHTS = "Ooky, and oh so spooky.",
+        RECORD_BALATRO = "I feel like some sorta retro tech collector.",
 
         ARCHIVE_ORCHESTRINA_MAIN = "Well, that definitely gets the gears in my head going.",
 
@@ -5463,7 +5488,10 @@ return {
 
         FENCE_JUNK = "More rubbish to surround myself with.",
         JUNK_PILE = "Looks like a goldmine in there! Better get rummaging.",
-        JUNK_PILE_BIG = "I think I've hit the jackpot!",
+        JUNK_PILE_BIG = {
+            BLUEPRINT = "Something glimmering has caught my eye...",
+            GENERIC = "I think I've hit the jackpot!",
+        },
 
         ARMOR_LUNARPLANT_HUSK = "Didn't know vines were 'in.'",
 
@@ -5673,27 +5701,81 @@ return {
 			GENERIC = "Empty.",
 			FILLED = "Full of life.",
 		},
+        WAGBOSS_ROBOT_SECRET = "Smells like someone else's dirty work.",
 		WAGBOSS_ROBOT = "What have I gotten myself tangled up in...",
         WAGBOSS_ROBOT_POSSESSED = "Whatever this is, it's no business of mine.",
+        WAGBOSS_ROBOT_LEG = "Great, something to hide behind.",
 		ALTERGUARDIAN_PHASE1_LUNARRIFT = "I thought we were finished with this?",
+        ALTERGUARDIAN_PHASE1_LUNARRIFT_GESTALT = "Why am I getting involved in this?",
         ALTERGUARDIAN_PHASE4_LUNARRIFT = "Uh oh. I don't like the look of that.",
 		WAGDRONE_ROLLING =
         {
             GENERIC = "That makes me feel old.",
-            FRIENDLY = "Maybe I'll ask that old guy for a roll-mode upgrade later.",
+            INACTIVE = "It's having a tactical nap.",
+            DAMAGED = "I don't know if I'm compatible with this tech...",
+            FRIENDLY = "Welcome to the estranged bot club.",
         },
-		WAGDRONE_FLYING = "It's... beautiful.",
+        WAGDRONE_FLYING =
+        {
+            GENERIC = "It's... beautiful.",
+            INACTIVE = "It's having a tactical nap.",
+            DAMAGED = "I don't know if I'm compatible with this tech...",
+        },
+		WAGDRONE_PARTS = "How could I resist stuffing my pockets with these...",
+		WAGDRONE_BEACON = "Keeps it all secure.",
 
         WAGPUNK_WORKSTATION = "Hopefully my skills in tinkering with tapes will translate to this.",
         WAGPUNK_LEVER = "Always fun to give a lever a good pull.",
         WAGPUNK_FLOOR_KIT = "Good for standing on.",
         WAGPUNK_CAGEWALL = "That'll keep something out.",
 
-        WANDERINGTRADER = "Ah, another wanderer. 'Cept I don't think we're after the same stuff.",
+		WAGSTAFF_ITEM_1 = "A real glove? That old man must be off his Zoloft.",
+		WAGSTAFF_ITEM_2 = "A real clipboard? That old man must be off his Zoloft.",
+
+        HERMITCRAB_RELOCATION_KIT = "Moving service for old ladies.",
+
+        WANDERINGTRADER =
+        {
+            REVEALED = "Ah, another wanderer. 'Cept I don't think we're after the same stuff.",
+            GENERIC = "I should shave him. Sure would be entertaining.",
+        },
 
         GESTALT_GUARD_EVOLVED = "I can see visions of where I came from... and I don't like it.", -- TODO
         FLOTATIONCUSHION = "Not comfy, but it beats drowning.",
         LUNAR_SEED = "The old guy's latest MacGuffin obsession.",
+        
+        -- electrocute
+        WAGBOSS_ROBOT_CONSTRUCTIONSITE = "Strange old guys are inherently untrustworthy.",
+        WAGBOSS_ROBOT_CONSTRUCTIONSITE_KIT = "So much work to be done. Ugh.",
+        WAGBOSS_ROBOT_CREATION_PARTS = "Work, work, work, work, work.",
+        MOONSTORM_STATIC_CATCHER = "Ow! Static shock.",
+        COOLANT = "I'm gonna *really* try not to get it everywhere.",
+
+        FENCE_ELECTRIC = {
+            LINKED = "Not like I'm planning on touching it.",      --NOTE: the fence post is fully linked to two other posts
+            GENERIC = "It needs some friends.",           --NOTE: no links or electricity, just boring ol fence post
+        },
+        FENCE_ELECTRIC_ITEM = "I'd better be careful with this once it's set up.",
+
+        MUTATEDBIRD = "Yeesh. Gross thing.",
+
+        BIRDCORPSE =
+        {
+            GENERIC  = "Well, that's that.", --witnessing the corpse
+            BURNING  = "Not a half-bad way to deal with the problem.", --when its burning
+            REVIVING = "Should I start running away yet?", --when its mutating and being revived
+        },
+
+        BUZZARDCORPSE = {
+            GENERIC = "Well, that's that.",
+            BURNING = "Not a half-bad way to deal with the problem.",
+            REVIVING = "Should I start running away yet?",
+        },
+
+        MUTATEDBUZZARD = {
+            GENERIC = "More disgusting than usual.", -- Generic string
+            EATING_CORPSE = "Even more disgusting than usual.", -- Eating from a fresh corpse (might be from the players kill or another creatures kill)
+        },
     },
 
     DESCRIBE_GENERIC = "Yup. S'definitely a thing.",

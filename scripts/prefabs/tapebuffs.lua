@@ -75,6 +75,7 @@ local function lightning_periodictask(inst, target)
                     if target:HasTag("tvheadguy_entertainment_lightning") then --IDEA: "moonstorm_spark_shock_fx" spawns pre-emptively before lightning
                         if victim:HasTag("epic") then
                             victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING.DAMAGE + TUNING.TAPE_LIGHTNING.BOSS_DMG_BONUS, nil, "electric", {planar = TUNING.TVSKILLTREE.LIGHTNING_PLANAR_DMG_BONUS})
+                            victim:PushEventImmediate("electrocute")
                             if victim.AnimState ~= nil then
                                 --SpawnPrefab("hitsparks_fx"):Setup(target, victim) --TODO: figure out why these nil checks don't work?????
                             else
@@ -82,6 +83,7 @@ local function lightning_periodictask(inst, target)
                             end
                         else
                             victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING.DAMAGE, nil, "electric", {planar = TUNING.TVSKILLTREE.LIGHTNING_PLANAR_DMG_BONUS})
+                            victim:PushEventImmediate("electrocute")
                             if victim.AnimState ~= nil then
                                 --SpawnPrefab("hitsparks_fx"):Setup(target, victim)
                             else
@@ -91,6 +93,7 @@ local function lightning_periodictask(inst, target)
                     else
                         if victim:HasTag("epic") then
                             victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING.DAMAGE + TUNING.TAPE_LIGHTNING.BOSS_DMG_BONUS, nil, "electric")
+                            victim:PushEventImmediate("electrocute")
                             if victim.AnimState ~= nil then
                                 --SpawnPrefab("hitsparks_fx"):Setup(target, victim) --TODO: figure out why these nil checks don't work?????
                             else
@@ -98,6 +101,7 @@ local function lightning_periodictask(inst, target)
                             end
                         else
                             victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING.DAMAGE, nil, "electric")
+                            victim:PushEventImmediate("electrocute")
                             if victim.AnimState ~= nil then
                                 --SpawnPrefab("hitsparks_fx"):Setup(target, victim)
                             else
@@ -468,6 +472,7 @@ local function electape_payback(player, data, inst)
                 --Skilltree
                 if player:HasTag("tvheadguy_entertainment_electric") then
                     attacker.components.combat:GetAttacked(player, damage_mult * TUNING.TAPE_ELECTRIC.DAMAGE, nil, "electric", {planar = TUNING.TVSKILLTREE.ELECTRIC_PLANAR_DMG_BONUS})
+                    attacker:PushEventImmediate("electrocute")
                     if attacker.AnimState ~= nil then
                         SpawnPrefab("hitsparks_fx"):Setup(player, attacker)
                     else
@@ -475,6 +480,7 @@ local function electape_payback(player, data, inst)
                     end
                 else
                     attacker.components.combat:GetAttacked(player, damage_mult * TUNING.TAPE_ELECTRIC.DAMAGE, nil, "electric")
+                    attacker:PushEventImmediate("electrocute")
                 end
             end
         end
@@ -1825,6 +1831,7 @@ local function lightning_upgraded_periodictask(inst, target)
 
                     if victim:HasTag("epic") then
                         victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING_UPGRADED.DAMAGE + TUNING.TAPE_LIGHTNING_UPGRADED.BOSS_DMG_BONUS, nil, "electric", {planar = TUNING.TAPE_LIGHTNING_UPGRADED.PLANAR_DMG_BONUS})
+                        victim:PushEventImmediate("electrocute")
                         if victim.AnimState ~= nil then
                             --SpawnPrefab("hitsparks_fx"):Setup(target, victim) --TODO: figure out why these nil checks don't work?????
                         else
@@ -1832,6 +1839,7 @@ local function lightning_upgraded_periodictask(inst, target)
                         end
                     else
                         victim.components.combat:GetAttacked(target, TUNING.TAPE_LIGHTNING_UPGRADED.DAMAGE, nil, "electric", {planar = TUNING.TAPE_LIGHTNING_UPGRADED.PLANAR_DMG_BONUS})
+                        victim:PushEventImmediate("electrocute")
                         if victim.AnimState ~= nil then
                             --SpawnPrefab("hitsparks_fx"):Setup(target, victim)
                         else

@@ -466,7 +466,7 @@ end
 
 --unified blacklist tags
 local sap = {"pinecone_sapling", "lumpy_sapling", "acorn_sapling", "twiggy_nut_sapling", "marblebean_sapling", "moonbutterfly_sapling",
-"palmcone_sapling", "ancienttree_sapling", "ancienttree_gem_sapling", "ancienttree_nightvision_sapling"}
+"palmcone_sapling", "ancienttree_sapling", "ancienttree_gem_sapling", "ancienttree_nightvision_sapling", "tree_rock_sapling"}
 for i, v in ipairs(sap) do
 	AddPrefabPostInit(v, function(inst)
 		if not GLOBAL.TheWorld.ismastersim then return end

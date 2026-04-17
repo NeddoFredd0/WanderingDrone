@@ -719,11 +719,24 @@ AddStategraphActionHandler("wilson_client", GLOBAL.ActionHandler(GLOBAL.ACTIONS.
 local function FakeEjectAction(doer)
 	if doer:HasTag("tvheadguy_storage_1") then
 		if doer:HasTag("tapefinder_tapeinserted") then
-			--so basically this code is ALL being run on the client only, we need to get the action on the server too
+			--send rpc -> server from client.
 			local act = GLOBAL.BufferedAction(doer, doer, GLOBAL.ACTIONS.TVEJECT)
-			if not GLOBAL.TheWorld.ismastersim then
-				SendModRPCToServer(GetModRPC("WanderingDrone", "RPCEjectToServer"), act.action.code) --todo: figure out how to pass table data through an RPC
-			end
+			-- if doer.components.locomotor == nil then
+				act.non_preview_cb = function()
+					-- SendModRPCToServer(GetModRPC("WanderingDrone", "RPCEjectToServer"), act.action.code)
+				end
+			-- elseif doer.components.playercontroller:CanLocomote() then
+				act.preview_cb = function()
+					-- SendModRPCToServer(GetModRPC("WanderingDrone", "RPCEjectToServer"), act.action.code)
+				end
+			-- else
+				-- return false
+			-- end
+
+			-- if not GLOBAL.TheWorld.ismastersim then
+			-- 	SendModRPCToServer(GetModRPC("WanderingDrone", "RPCEjectToServer"), act.action.code)
+			-- end --OLD RPC CODE BEFORE 8/02/2026
+
 			--if not GLOBAL.TheWorld.ismastersim then
 			--	GLOBAL.SendRPCToServer(GLOBAL.RPC.ControllerActionButton, act.action.code, doer)
 			--end

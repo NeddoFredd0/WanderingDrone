@@ -33,6 +33,9 @@ return {
             NOTMERM = "I'm not fishy, scaly, or smelly enough for that.",
             NOKELP = "only_used_by_wurt",
             HASMERMLEADER = "only_used_by_wurt",
+            NOTAROBOT = "That's for 'bots,' not 'drones.'",
+            NOTMYBACKUP = "only_used_by_wx78",
+            TOOMANYBACKUPBODIES = "only_used_by_wx78",
             },
         APPLYELIXIR =
         {
@@ -74,6 +77,7 @@ return {
             HASPET = "Already got an annoying creature of my own.",
 			TICOON = "Already got a chubby wanderer.",
             BUSY_STATION = "Come on, mate. Time's ticking.",
+            TOOMANYBACKUPBODIES = "only_used_by_wx78",
         },
         CARNIVALGAME_FEED =
         {
@@ -231,6 +235,7 @@ return {
         HARVEST =
         {
             DOER_ISNT_MODULE_OWNER = "Nah, don't think that's a go.",
+            DOER_DOESNT_HAVE_SKILL = "only_used_by_wx78",
         },
         HEAL =
         {
@@ -365,6 +370,9 @@ return {
             NOTAMERM = "Maybe if I smelt a bit more like fish.",
             NOTSOULJARHANDLER = "Not my place to go rummaging around.",
             RESTRICTED = "Surprisingly thief-proof.",
+            NOTAROBOT = "That's for 'bots,' not 'drones.'",
+            NOTMYBACKUP = "only_used_by_wx78",
+            TOOMANYBACKUPBODIES = "only_used_by_wx78",
 		},
         SADDLE =
         {
@@ -398,6 +406,19 @@ return {
             NOTMASTERCHEF = "I'm definitely not a cooking drone.",
             NOTSOULJARHANDLER = "None of my business, this is.",
             RESTRICTED = "Surprisingly thief-proof.",
+            NOTAROBOT = "That's for 'bots,' not 'drones.'",
+            NOTMYBACKUP = "only_used_by_wx78",
+            TOOMANYBACKUPBODIES = "only_used_by_wx78",
+		},
+		STARTMAPDELIVER =
+		{
+			EMPTY = "only_used_by_wx78",
+			INUSE = "only_used_by_wx78",
+			NOSKILL_DRONE = "only_used_by_wx78", 
+		},
+        SWAPBODIES_MAP =
+        {
+            NOTARGET = "only_used_by_wx78",
 		},
         TEACH =
         {
@@ -427,6 +448,10 @@ return {
         {
             BEDAZZLED = "only_used_by_webber",
         },
+        USEEQUIPPEDITEM =
+        {
+            BADPOSITION = "only_used_by_wx78",
+        },
         USEITEMON =
         {
             --GENERIC = "I can't use this on that!",
@@ -439,6 +464,8 @@ return {
 			NOT_MINE = "This beefalo isn't mine.",
 
             CANNOT_FIX_DRONE = "This drone needs a repair, but I'm not a repair drone.",
+
+            GESTALT_TOO_POWERFUL = "only_used_by_wx78",
         },
 		USEKLAUSSACKKEY =
         {
@@ -1207,6 +1234,17 @@ return {
     -- Winter's Feast 2025
     ANNOUNCE_HERMITCRAB_SHELL_BADTELEPORTPOINT = "Seems like we're stuck.",
     ANNOUNCE_HERMITCRAB_SHELL_ARRIVE = "What's a little jaunt between friends?",
+
+        -- Year of the Clockwork Knight
+    ANNOUNCE_YOTH_ONCOOLDOWN = "A fellow slackoff, hey?",
+	-- Post-YOTH
+	ANNOUNCE_MAX_CLOCKWORKS = "I've hit the bot friend limit.",--when befriending clockworks, only 2 of each kind will follow. max of  follow, WX has more.
+
+    -- wx specific
+    ANNOUNCE_WX_SCANNER_HITDOWN_BY_CAT = "only_used_by_wx78",
+    ANNOUNCE_WX_TASER_BUILDUP = "only_used_by_wx78", -- Wx is building up charge when getting hit, nearing EMP blast
+    ANNOUNCE_WX_TASER_ABOUTTOEXPLODE = "only_used_by_wx78", -- Wx is fully charged and about to release it. Take cover!
+    ANNOUNCE_WX_TASER_POSTEXPLOSION = "only_used_by_wx78", -- Wx has exploded and released all the build up, now they can say something about how invigorating it was.
 
 	BATTLECRY =
 	{
@@ -2131,7 +2169,7 @@ return {
 		CHESSPIECE_CATCOON = "The scavenger's form.",
         CHESSPIECE_MANRABBIT = "In chess, the rabbit can burrow under enemy lines. Something like that.",
         CHESSPIECE_GUARDIANPHASE3 = "Does it count as a trophy if I made it myself?",
-        CHESSPIECE_EYEOFTERROR = "I'd start a staring contest, but I might have an unfair advantage.",
+        CHESSPIECE_EYEOFTERROR = "I'd start a staring contest, but I might be at a disadvantage.",
         CHESSPIECE_TWINSOFTERROR = "Eye don't really get the appeal behind this.",
         CHESSPIECE_DAYWALKER = "A granite porcine statue, for where I reside.",
         CHESSPIECE_DAYWALKER2 = "That bastard tried to keep me from my tapes.",
@@ -2143,6 +2181,7 @@ return {
         CHESSPIECE_YOTS = "Festivities aren't my forte.",
         CHESSPIECE_WAGBOSS_ROBOT = "Creepy guys and evil robots are an awful combination.",
         CHESSPIECE_WAGBOSS_LUNAR = "Well, yippee for us.",
+        CHESSPIECE_YOTH = "Kneigh.",
 
         CHESSJUNK1 = "It's junk, and there's lots of it. Not quite what I'm looking for...",
         CHESSJUNK2 = "I've got junk on the brain.",
@@ -2183,6 +2222,7 @@ return {
         CRITTER_KITTEN = "Maybe it could help me find some junk.",
         CRITTER_PERDLING = "A thief, just like me. 'Cept we steal different things.",
 		CRITTER_LUNARMOTHLING = "I don't see what's wrong with a lantern.",
+        CRITTER_BULBIN = "Onions. Never liked em.",
 
 		CROW =
 		{
@@ -2815,7 +2855,11 @@ return {
         ROCKS = "I'm not sure if their usefulness outweighs their heaviness.",
         ROOK = "You're mechanical, I'm not. Dunno if we can get along.",
         ROPE = "All the survival guys on tape always talk about this.",
-        ROTTENEGG = "Stinks like a --- -----. Oop, censor caught that one.",
+        ROTTENEGG =
+        {
+            GENERIC = "Stinks like a --- -----. Oop, censor caught that one.",
+            CAN_PROCESS = "only_used_by_wx78",
+        },
         ROYAL_JELLY = "Bee upgrade module. I don't plan on eating it.",
         JELLYBEAN = "As long as they don't explode into sticky juice.",
         SADDLE_BASIC = "Riding will be smelly. But, I won't have to walk...",
@@ -2917,11 +2961,15 @@ return {
 			GENERIC = "An angry little sod with eight angry little legs.",
 			SLEEPING = "Just keep on sleepin', mate.",
 		},
-		SPOILED_FOOD = "And here I thought food couldn't possibly get any worse.",
+        SPOILED_FOOD =
+        {
+            GENERIC = "And here I thought food couldn't possibly get any worse.",
+            CAN_PROCESS = "only_used_by_wx78",
+        },
         STAGEHAND =
         {
 			AWAKE = "Gahh! I knew I was being watched.",
-			HIDING = "A perfectly set table, in the middle of nowhere? Nice try.",
+			HIDING = "Who's up for a game of checkers?",
         },
         STATUE_MARBLE =
         {
@@ -2938,7 +2986,7 @@ return {
 		STUFFEDEGGPLANT = "Putting other food inside a starchy purple sausage doesn't make it any nicer.",
 		SWEATERVEST = "Makes me look quite snappy.",
 		REFLECTIVEVEST = "I'm not a construction drone.",
-		HAWAIIANSHIRT = "Almost makes me wish I could sip down some cold coconut juice.",
+		HAWAIIANSHIRT = "Almost makes me wish I could sip down some cold coconut juice. Almost...",
 		TAFFY = "Don't really know about gumming up my delicate internals.",
 		TALLBIRD = "I don't think this bird is a fan of thieves.",
 		TALLBIRDEGG = "I stole it from its mum.",
@@ -4079,7 +4127,11 @@ return {
         FISHMEAT_COOKED = "It's still fulla scales and bones.",
         FISHMEAT_SMALL = "Full of guts, and salty bits, and... I'll pass.",
         FISHMEAT_SMALL_COOKED = "It's still full of guts. Guhh.",
-		SPOILED_FISH = "It's not any better in death than it was in life.",
+        SPOILED_FISH =
+        {
+            GENERIC = "It's not any better in death than it was in life.",
+            CAN_PROCESS = "only_used_by_wx78",
+        },
 
 		FISH_BOX = "Could keep them there if I need 'em for later. Which I won't.",
         POCKET_SCALE = "Maybe someone else'll want some fish.",
@@ -5920,6 +5972,8 @@ return {
 
 		--Winter's Feast 2025
 
+        W_RADIO = "A proper mystery! How entertaining...",
+
 		HERMITHOTSPRING  =
         {
             BOMBED = "Hopping in there'll calcify my joints!",
@@ -5988,6 +6042,81 @@ return {
             ABANDONED = "Let's get those lights back on.",
         },
         HERMITCRAB_LIGHTPOST_ITEM = "Construction, schmonstruction.",
+
+        -- Year of the Clockwork Knight
+
+        YOTH_KNIGHTSHRINE =
+        {
+            GENERIC = "I don't give away my junk often. Make the most of it!", -- Has an offering of either gears, wires or doodad.
+            EMPTY = "It wants some junk.", -- No offering. Character should hint at it wanting an offering.
+            BURNT = "Well, so much for that.", -- Burnt.
+        },
+
+        MASK_PRINCESSHAT = "I can play the princess... if I ABSOLUTELY must.",
+        COSTUME_PRINCESS_BODY = "I can play the princess... if I ABSOLUTELY must.",
+
+        PLAYBILL_THE_PRINCESS_YOTH = "Time to entertain the masses.",
+
+        KNIGHT_YOTH =
+        {
+            GENERIC = "Argh! Get off me!", -- Generic quote. It's aggressive.
+            FOLLOWING = "Got someone else to do the dirty work.", -- Following the character examining
+            FOLLOWING_OTHER = "Someone's making the most of that minion.", -- Following another character or mannequin
+        },
+
+        YOTH_KNIGHTHAT = "I wish fun costumes weren't so heavy.",
+        ARMOR_YOTH_KNIGHT = "I wish fun costumes weren't so heavy.",
+        HORSESHOE = "This feels important... I'll be holding onto it.",
+        YOTH_LANCE = "'Huzzah! I shall'eth pok'eth thee!'",
+
+        FLOATINGLANTERN =
+        {
+            DEFLATED = "Its entertainment work is over. Unlike mine.", -- Depleted and on the ground
+            HELD = "Gotta let it go and watch it fly.", -- In the players inventory
+            GENERIC = "Well, isn't that fun.", -- Floating in the sky!
+        },
+
+        YOTH_KNIGHTSTICK = "Not really my kinda shtick.",
+        YOTH_CHAIR_ROCKING_ITEM = "All the joys of riding a Beefalo, without any of the work.", -- The chair itself uses WOOD_CHAIR inspect states.
+
+		-- Meta 6
+
+		WX78_DRONE_SCOUT = "Radar scans? That's my tech!!",
+		WX78_DRONE_DELIVERY = "Let me know if you see any old, black, square, plastic things!",
+		WX78_DRONE_ZAP = "Maybe I need to safeguard my tape tech a bit more strongly.",
+		WX78_DRONE_ZAP_REMOTE =
+		{
+			GENERIC = "DON'T point that at me!",
+			CANUSE = "only_used_by_wx78",
+		},
+
+        -- All other characters but Wx-78 share one quote.
+        WX78MODULE_RADAR = "Pretty cool tech. Too bad it's way too advanced for me.",
+        WX78MODULE_STACKSIZE = "Pretty cool tech. Too bad it's way too advanced for me.",
+        WX78MODULE_DIGESTION = "Pretty cool tech. Too bad it's way too advanced for me.",
+        WX78MODULE_SCREECH = "Pretty cool tech. Too bad it's way too advanced for me.",
+        WX78MODULE_LIGHT2 = "Pretty cool tech. Too bad it's way too advanced for me.",
+        WX78MODULE_SHIELDING = "Pretty cool tech. Too bad it's way too advanced for me.",
+        WX78MODULE_SPIN = "Pretty cool tech. Too bad it's way too advanced for me.",
+
+        WX78_INVENTORYCONTAINER =
+        {
+            HELD = "only_used_by_wx78", -- Held, and working as a container
+			NOPOWER = "only_used_by_wx78", -- Held but can't open due to wx charge level too low
+            GENERIC = "Any goodies inside ... ?", -- It was dropped, treat it as if its broken down, and is rummagable
+        },
+
+        WX78_FOODBRICK =
+        {
+            WET = "No.",
+            GENERIC = "I already have my own oblong things to ingest.",
+        },
+
+        WX78_POSSESSEDBODY = "I sure hope you can't transfer into *me*.",
+
+        WX78_GESTALTTRAPPER = "Being stored away in a tiny thing like that... yeuch.",
+
+        SHADOW_HEART_VEIN = "Gross, but it's got something for me...",
     },
 
     DESCRIBE_GENERIC = "Yup. S'definitely a thing.",

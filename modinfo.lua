@@ -2,19 +2,10 @@
 name = "Wandering Drone (Skilltree Update!)"
 description =
 [[
-Patch Notes: (0.2.0.5 Hostile Takeover Compatibility)
-- WD's electric-themed tapes will now trigger the new electrocution state on victims
-- Updated examine quotes up to Hostile Takeover
-- Fixed some typos and reworded some descriptions
-
-Major skilltree update - focusing on the Affinity tree, and the Media Archive.
-- Affinity tree has 4 brand new skills (2 for each side.)
-- 2 brand new late game craftable tapes!
-- New gameplay effects for taking apart tape junk
-- When a Media Archive is built, all tapes have a chance to cost 0 durability
-- A bunch of changes to make the Archive and Apportation tape much more useable!
-- Rebalances to the combat tapes, hopefully making them more even in terms of power
-- And plenty more balances/changes etc, viewable on the Steam Workshop
+Patch Notes: (0.2.0.6 WX78 Skilltree Compatibility)
+- Removed Eject keybind feature as it was crashing the game
+- Fixed Brute Force skill not working (it now uses a default character state instead of a custom one.)
+- Updated examine quotes
 
 (NOTE: Enable Modded Skins API for 3 fancy-schmancy custom skins!)
 Play as the strange Wandering Drone, an entertainment construct escaped from a far off facility - it's origin as mysterious to itself as those around it.
@@ -25,7 +16,7 @@ Turn them into powerful abilities you can use to enhance your survival experienc
 However, you must maintain a mysterious Itch in order to not self-destruct. Entertainment is your purpose, after all.
 ]]
 author = "NeddoFreddo"
-version = "0.2.0.5" -- 0.2.0.5 Compatibility
+version = "0.2.0.6" -- 0.2.0.6 Compatibility
 
 -- This is the URL name of the mod's thread on the forum; the part after the ? and before the first & in the url
 forumthread = ""

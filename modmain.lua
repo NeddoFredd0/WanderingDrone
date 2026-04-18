@@ -681,8 +681,8 @@ local function smashfnc(inst, doer, actions) --right
 end
 AddComponentAction("INVENTORY", "tapebits_smash", smashfnc) --actiontype, component, function, modname
 
-AddStategraphActionHandler("wilson", GLOBAL.ActionHandler(GLOBAL.ACTIONS.TAPEBITS_SMASH, "tapebits_smash")) ---"tapebits_smash"
-AddStategraphActionHandler("wilson_client", GLOBAL.ActionHandler(GLOBAL.ACTIONS.TAPEBITS_SMASH, "tapebits_smash"))
+AddStategraphActionHandler("wilson", GLOBAL.ActionHandler(GLOBAL.ACTIONS.TAPEBITS_SMASH, "doswipeaction")) -- custom state "tapebits_smash_state" is broken :(
+AddStategraphActionHandler("wilson_client", GLOBAL.ActionHandler(GLOBAL.ACTIONS.TAPEBITS_SMASH, "doswipeaction")) -- custom state "tapebits_smash_state" is broken :(
 
 ---------------------------------------------------------------------------------------------
 

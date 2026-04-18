@@ -6,7 +6,7 @@ env.AddStategraphPostInit("wilson", function(inst)
 local states = {
 
     State{
-        name = "tapebits_smash",
+        name = "tapebits_smash_state",
         tags = { "doing", "busy", "canrotate" },
 
         onenter = function(inst)

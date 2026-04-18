@@ -11,8 +11,6 @@ local tapebits_smash = Class(function(self, inst)
 end)
 
 function tapebits_smash:Smash(invobject, doer)
-    --doer.sg:GoToState("tapebits_smash")
-
     local owner = invobject.components.inventoryitem:GetGrandOwner()
     local receiver = owner ~= nil and (owner.components.inventory or owner.components.container) or nil
     local stacksize = invobject.components.stackable ~= nil and invobject.components.stackable:StackSize() or 1

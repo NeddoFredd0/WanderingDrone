@@ -59,39 +59,40 @@ server_filter_tags = {
 }
 
 --credit: Gesture Wheel mod
-local KEY_A = 65
-local keyslist = {}
-local string = ""
-for i = 1, 26 do
-	local ch = string.char(KEY_A + i - 1)
-	keyslist[i] = {description = ch, data = ch}
-end
+-- local KEY_A = 65
+-- local keyslist = {}
+-- local string = ""
+-- for i = 1, 26 do
+-- 	local ch = string.char(KEY_A + i - 1)
+-- 	keyslist[i] = {description = ch, data = ch}
+-- end
 
-configuration_options =
-{
-	{
-		name = "EJECTKEY",
-		label = "Eject Keyboard Bind",
-		hover = "Keyboard keybind for the Eject skill.",
-		options = keyslist,
-		default = "R",
-	},
-    {
-		name = "EJECTCONTROL",
-		label = "Eject Controller Button/s",
-		hover = "Controller button options for the Eject skill.\nWarning: some options conflict with base game controls.",
-		options = {
-			{description = "[No Bind]", data = 0}, --no bind option for conflicts
-            {description = "\238\128\141", data = 1}, --left dpad
-            {description = "\238\128\135 and \238\128\138", data = 2}, --left and right bumpers
-            {description = "\238\128\134 and \238\128\137", data = 3}, --left stick and right stick press
+-- configuration_options =
+-- {
+-- 	{
+-- 		name = "EJECTKEY",
+-- 		label = "Eject Keyboard Bind",
+-- 		hover = "Keyboard keybind for the Eject skill.",
+-- 		options = keyslist,
+-- 		default = "R",
+-- 	},
+--     {
+-- 		name = "EJECTCONTROL",
+-- 		label = "Eject Controller Button/s",
+-- 		hover = "Controller button options for the Eject skill.\nWarning: some options conflict with base game controls.",
+-- 		options = {
+-- 			{description = "[No Bind]", data = 0}, --no bind option for conflicts
+--             {description = "\238\128\141", data = 1}, --left dpad
+--             {description = "\238\128\135 and \238\128\138", data = 2}, --left and right bumpers
+--             {description = "\238\128\134 and \238\128\137", data = 3}, --left stick and right stick press
 
-        },
-		default = 2,
-	},
+--         },
+-- 		default = 2,
+-- 	},
 
-}
+-- }
 
+--super old
 --configuration_options = {
 --    {
 --        name = "TVFLICKEREFFECTS_ON",

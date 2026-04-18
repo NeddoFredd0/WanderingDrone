@@ -1020,7 +1020,8 @@ STRINGS.TVSKILLTREE = {
     LOCK4_DESC = "Find and defeat the Celestial Champion.\nHave no Shadow Allegiance Skills.",
 
 	STORAGE_1_TITLE = "Eject",
-	STORAGE_1_DESC = "Eject tapes prematurely at the cost of double durability, and a small Itch penalty.\n(By default, press [R] on keyboard, or \238\128\135 + \238\128\138 on a controller.)",
+	STORAGE_1_DESC = "Eject tapes prematurely at the cost of double durability, and a small Itch penalty.\n(To use, right click on the character while a tape is playing.)",
+	--STORAGE_1_DESC = "Eject tapes prematurely at the cost of double durability, and a small Itch penalty.\n(By default, press [R] on keyboard, or \238\128\135 + \238\128\138 on a controller.)",
 
     STORAGE_2_TITLE = "Archivist",
 	STORAGE_2_DESC = "Learn to craft the "..STRINGS.NAMES.TAPESTORAGE..", a repository for all your plastic things.\nWhile an Archive is built in the world, all played tapes have a "..(TUNING.TVSKILLTREE.ARCHIVE_FREEUSE_CHANCE*100).."% chance to cost 0 durability.",

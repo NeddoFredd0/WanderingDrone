@@ -750,83 +750,83 @@ end
 --KEYBINDINGS SETUP
 ---------------------------------------------------------------------------------------------
 
---Credit Maxwell Keybinds
-local function IsDefaultScreen()
-	return GLOBAL.ThePlayer and GLOBAL.ThePlayer ~= nil
-		and GLOBAL.ThePlayer.components.playercontroller:IsEnabled()
-		and GLOBAL.TheFrontEnd:GetActiveScreen().name == "HUD"
-		and not GLOBAL.ThePlayer.HUD:IsChatInputScreenOpen()
-		and not GLOBAL.ThePlayer.HUD:IsConsoleScreenOpen()
-		and not GLOBAL.ThePlayer.HUD:IsCraftingOpen()
-		and not GLOBAL.ThePlayer.HUD.writeablescreen
-end
+-- --Credit Maxwell Keybinds
+-- local function IsDefaultScreen()
+-- 	return GLOBAL.ThePlayer and GLOBAL.ThePlayer ~= nil
+-- 		and GLOBAL.ThePlayer.components.playercontroller:IsEnabled()
+-- 		and GLOBAL.TheFrontEnd:GetActiveScreen().name == "HUD"
+-- 		and not GLOBAL.ThePlayer.HUD:IsChatInputScreenOpen()
+-- 		and not GLOBAL.ThePlayer.HUD:IsConsoleScreenOpen()
+-- 		and not GLOBAL.ThePlayer.HUD:IsCraftingOpen()
+-- 		and not GLOBAL.ThePlayer.HUD.writeablescreen
+-- end
 
---Credit Gesture Wheel
-EJECTKEY = GetModConfigData("EJECTKEY") or "R"
-if type(EJECTKEY) == "string" then
-	EJECTKEY = EJECTKEY:lower():byte()
-end
+-- --Credit Gesture Wheel
+-- EJECTKEY = GetModConfigData("EJECTKEY") or "R"
+-- if type(EJECTKEY) == "string" then
+-- 	EJECTKEY = EJECTKEY:lower():byte()
+-- end
 
-EJECTCONTROL = GetModConfigData("EJECTCONTROL") or 2
---_EJECTCONTROL = "\238\128\141"
+-- EJECTCONTROL = GetModConfigData("EJECTCONTROL") or 2
+-- --_EJECTCONTROL = "\238\128\141"
 
-local righttrigger = GLOBAL.CONTROL_OPEN_INVENTORY
-local lefttrigger = GLOBAL.CONTROL_OPEN_CRAFTING
-local leftbumper = GLOBAL.CONTROL_ROTATE_LEFT
-local rightbumper = GLOBAL.CONTROL_ROTATE_RIGHT
-local leftstickpress = GLOBAL.CONTROL_MENU_MISC_3
-local rightstickpress = GLOBAL.CONTROL_MENU_MISC_4
-local leftdpad = GLOBAL.CONTROL_FOCUS_LEFT
+-- local righttrigger = GLOBAL.CONTROL_OPEN_INVENTORY
+-- local lefttrigger = GLOBAL.CONTROL_OPEN_CRAFTING
+-- local leftbumper = GLOBAL.CONTROL_ROTATE_LEFT
+-- local rightbumper = GLOBAL.CONTROL_ROTATE_RIGHT
+-- local leftstickpress = GLOBAL.CONTROL_MENU_MISC_3
+-- local rightstickpress = GLOBAL.CONTROL_MENU_MISC_4
+-- local leftdpad = GLOBAL.CONTROL_FOCUS_LEFT
 
-local function GetEjectControl()
-	if EJECTCONTROL == 2 then --Left and Right Bumpers
-		--_EJECTCONTROL = "\238\128\135 and \238\128\138"
-		return leftbumper
-	elseif EJECTCONTROL == 3 then --Left and Right Stick Press
-		--_EJECTCONTROL = "\238\128\134 and \238\128\137"
-		return leftstickpress
-	elseif EJECTCONTROL == 2 then --Left D-Pad
-		--_EJECTCONTROL = "\238\128\141"
-		return leftdpad
-	else
-		return nil
-	end
-end
+-- local function GetEjectControl()
+-- 	if EJECTCONTROL == 2 then --Left and Right Bumpers
+-- 		--_EJECTCONTROL = "\238\128\135 and \238\128\138"
+-- 		return leftbumper
+-- 	elseif EJECTCONTROL == 3 then --Left and Right Stick Press
+-- 		--_EJECTCONTROL = "\238\128\134 and \238\128\137"
+-- 		return leftstickpress
+-- 	elseif EJECTCONTROL == 2 then --Left D-Pad
+-- 		--_EJECTCONTROL = "\238\128\141"
+-- 		return leftdpad
+-- 	else
+-- 		return nil
+-- 	end
+-- end
 
-if GetEjectControl() ~= nil then --in case no controller bind is set
-	GLOBAL.TheInput:AddControlHandler(GetEjectControl(), function()
-		--if GLOBAL.TheInput:ControllerAttached() and GLOBAL.TheInput:IsControlPressed(leftdpad) then
-		if IsDefaultScreen() and GLOBAL.ThePlayer:HasTag("tapemaker") then
-			if EJECTCONTROL == 2 then --Left and Right Bumpers
-				if GLOBAL.TheInput:IsControlPressed(rightbumper) then
-					--print("DEBUG: Bumper input successful!")
-					--GLOBAL.ThePlayer.components.talker:Say("Bumpers pressed!")
-					FakeEjectAction(GLOBAL.ThePlayer)
-				end
-			elseif EJECTCONTROL == 3 then --Left and Right Stick Press
-				if GLOBAL.TheInput:IsControlPressed(rightstickpress) then
-					--print("DEBUG: Stick press input successful!")
-					--GLOBAL.ThePlayer.components.talker:Say("Both Sticks Pressed!")
-					FakeEjectAction(GLOBAL.ThePlayer)
-				end
-			else --Left D-Pad
-				--print("DEBUG: Dpad input successful!")
-				--GLOBAL.ThePlayer.components.talker:Say("D-Pad Left Pressed!")
-				FakeEjectAction(GLOBAL.ThePlayer)
-			end
-		end
-	end)
-end
+-- if GetEjectControl() ~= nil then --in case no controller bind is set
+-- 	GLOBAL.TheInput:AddControlHandler(GetEjectControl(), function()
+-- 		--if GLOBAL.TheInput:ControllerAttached() and GLOBAL.TheInput:IsControlPressed(leftdpad) then
+-- 		if IsDefaultScreen() and GLOBAL.ThePlayer:HasTag("tapemaker") then
+-- 			if EJECTCONTROL == 2 then --Left and Right Bumpers
+-- 				if GLOBAL.TheInput:IsControlPressed(rightbumper) then
+-- 					--print("DEBUG: Bumper input successful!")
+-- 					--GLOBAL.ThePlayer.components.talker:Say("Bumpers pressed!")
+-- 					FakeEjectAction(GLOBAL.ThePlayer)
+-- 				end
+-- 			elseif EJECTCONTROL == 3 then --Left and Right Stick Press
+-- 				if GLOBAL.TheInput:IsControlPressed(rightstickpress) then
+-- 					--print("DEBUG: Stick press input successful!")
+-- 					--GLOBAL.ThePlayer.components.talker:Say("Both Sticks Pressed!")
+-- 					FakeEjectAction(GLOBAL.ThePlayer)
+-- 				end
+-- 			else --Left D-Pad
+-- 				--print("DEBUG: Dpad input successful!")
+-- 				--GLOBAL.ThePlayer.components.talker:Say("D-Pad Left Pressed!")
+-- 				FakeEjectAction(GLOBAL.ThePlayer)
+-- 			end
+-- 		end
+-- 	end)
+-- end
 
 
-GLOBAL.TheInput:AddKeyDownHandler(EJECTKEY, function()
-	--if GLOBAL.TheInput:ControllerAttached() and GLOBAL.TheInput:IsControlPressed(leftdpad) then
-	if IsDefaultScreen() and GLOBAL.ThePlayer:HasTag("tapemaker") then
-		--print("DEBUG: controller input successful!")
-		--GLOBAL.ThePlayer.components.talker:Say("R key pressed!")
-		FakeEjectAction(GLOBAL.ThePlayer)
-	end
-end)
+-- GLOBAL.TheInput:AddKeyDownHandler(EJECTKEY, function()
+-- 	--if GLOBAL.TheInput:ControllerAttached() and GLOBAL.TheInput:IsControlPressed(leftdpad) then
+-- 	if IsDefaultScreen() and GLOBAL.ThePlayer:HasTag("tapemaker") then
+-- 		--print("DEBUG: controller input successful!")
+-- 		--GLOBAL.ThePlayer.components.talker:Say("R key pressed!")
+-- 		FakeEjectAction(GLOBAL.ThePlayer)
+-- 	end
+-- end)
 
 --CONTAINER SETUP
 ---------------------------------------------------------------------------------------------
